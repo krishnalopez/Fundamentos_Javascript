@@ -1,127 +1,181 @@
-//ejercicos codiciones if-Else
+script.js
+//Ejercicios codiciones IF else 
+console.log("Conexion de JS  establecida...");
 
-console.log("conexión con js establecida...")
-
-/*n 1 Edad para votar
- Solicita la edad del usuario mediante prompt(). Muestra con alert() si puede votar (18 años o más) o no. */
-
+/* Edad para votar
+Solicita la edad del usuario mediante prompt().
+Muestra con alert() si puede votar
+(18 años o mas) o no.
+*/
 function edadVotar() {
-    let edad = parseInt(prompt("Ingrese su edad.")); //ingreso o input tipo conversion string a numero
-    //Condición if - else if  - else--IF es si - ELSE IF es si no- ELSE es 
-    //solo el else no tine()
-
+    let edad = parseInt(prompt("Ingrese su edad: ")); // Input conversion string a numero
+    //condicion IF - else if - else
     if (edad >= 18) {
-        alert("Su edad " + edad + " aprobada para votar.");
-    } else if (edad >= 0 && edad < 18) { //&& compuerta AND
-        alert("Su edad" + edad + "no esta aprobada para votar.");
+        alert("Su edad " + edad + " Aprobada para votar.");
+    } else if (edad >= 0 && edad <= 18) {//&& compuerta AND
+        alert("Su edad " + edad + " no esta aprobada para votar.");
     } else {
-        alert("Ingrese un valor válido");
+        alert("ingrese un valor válido");
+
     }
+
 };
 
-
-/*  2 Contraseña válida
- Pide una contraseña con prompt(). Si es igual a "1234", muestra un mensaje de acceso permitido. En caso contrario, 
- muestra acceso denegado.
- */
-
-function contraseñaValida() {
+/* Contraseña valida 
+Pide una contrseña prompt().
+Si es igual 1 "1234", muestra un mensaje 
+de acceso permitido. En caso contrario,
+Muestra acceso denegado.
+*/
+function validarPassword() {
     let clave = "1234";
-    let contraseña = prompt("Ingresar contraseña");
-    //Condición estructura if - else
-    if (contraseña == clave) {
-        alert("Acceso permitido...")
+    let pass = prompt("Ingrese su contraseña: ")
+    //Condicion estructura if - else 
+    if (pass == clave) {
+        alert("Acceso Permitido...");
     } else {
-        alert("Acceso denegado")
+        alert("Acceso Denegado");
     }
 }
 
 
+//Ejercicio tres
+/*   
+Pide un número por prompt().
+Evalúa si el número es par o impar
+y muestra el resultado con alert().
+  */
 
-/*  3 Verificar par o impar
- Pide un número por prompt(). Evalúa si el número es par o impar 
- y muestra el resultado con alert().
-*/
-
-function parImpar() {
-    let numero = prseInt(prompt("Ingrasar Numero"));
-    if (numero % 2 == 0) {//numero / 2 = resto
+function verificarParImpar() {
+    let numero = parseInt(prompt("Ingresar Número"));
+    if (numero % 2 == 0) {
         alert("Es par");
     } else {
-        alert("Es impar")
+        alert("Es impar");
     }
-
 };
 
-/* 4 Temperatura ambiental
- Solicita la temperatura actual. Si es mayor o igual a 30, muestra “Hace calor”, de lo contrario muestra “Clima agradable”.
- */
+// Ejercicio cuatro
+/*
+Solicita la temperatura actual. Si es mayor o igual a 
+30, muestra “Hace calor”, 
+de lo contrario muestra “Clima agradable”.
+*/
+
 function temperaturaAmbiental() {
-    let temperatura = parseInt(prompt("Imgresar temperatura"));
+    let temperatura = parseInt(prompt("Ingresar Temperatura"));
     if (temperatura >= 30 && temperatura <= 50) {
         alert("Hace calor");
     } else if (temperatura >= 15 && temperatura < 30) {
-        alert("Agradable")
-    }
-    else if (temperatura >= -5 && temperatura <= 15) {
-        alert("Hace frío")
+        alert("Agradable");
+    } else if (temperatura >= -5 && temperatura <= 15) {
+        alert("Hace frio");
     } else {
-        alert("Ingresar un  valor válido")
+        alert("Ingrese unvalor valido");
     }
-};
-
-
-/* 5 Comparar dos números
- Solicita dos números al usuario. 
- Compara ambos y muestra cuál es mayor o si son iguales.
- */
-
-function comparaNumeros() {
-    let num1 = parseInt(prompt("Ingresar primer numero"));
-    let num2 = parseInt(prompt("Ingresar segundo numero"));
-    if (num1 < num2) {
-        alert("el numero" + num1 + " es menor que " + num2);
-    } else if (num1 == num2) {
-        alert("el numero " + num1 + " es igual que " + num2);
-    }
-    else {
-        alert("elnumero" + num1 + "es mayor que " + num2);
-    }
-
-
-
 }
 
-/* 6 Calificación escolar
- Pide una nota entre 1 y 7. Si es 4 o más, muestra “Aprobado”, si es menor, muestra “Reprobado”.*/
+//Ejercicio cinco
+/*
+Solicita dos números al usuario.
+Compara ambos y muestra cuál 
+es mayor o si son iguales
+ */
 
-
-
-
-/* 7 Nombre de usuario válido
-Pide un nombre de usuario. Si el valor ingresado es "admin", muestra “Bienvenido,
- administrador”. Si no, muestra “Usuario no reconocido”.*/
+function compararNumeros() {
+    let num1 = parseInt(prompt("Ingresar priemr número "));
+    let num2 = parseInt(prompt("Ingresar segundo número "));
+    if (num1 < num2) {
+        alert(" El numero " + num1 + " es menor que " + num2);
+    } else if (num1 == num2) {
+        alert(" El numero " + num1 + " es igual que " + num2);
+    }
+    else {
+        alert(" El numero " + num1 + " es mayor que " + num2);
+    }
+}
+/*
+Pide una nota entre 1 y 7.
+Si es 4 o más, muestra “Aprobado”, 
+si es menor, muestra “Reprobado”.
+*/
+function note() {
+    let ingresa = parseInt(prompt("Ingresa tu nota: "))
+    if (ingresa <= 4) {
+        alert("Desaprovado");
+    } else if (ingresa >= 4 && ingresa <= 7) {
+        alert("Aprovado");
+    } else {
+        alert("por favor, ingresar valor valido");
+    }
+}
+/*
+Nombre de usuario válido
+ Pide un nombre de usuario.
+  Si el valor ingresado es "admin"
+ , muestra “Bienvenido, administrador”.
+  Si no, muestra “Usuario no reconocido”.*/
 
 function usuarioAdmin() {
     let usu = prompt("Ingrese usuario")
     if (usu == "admin") {
-        alert("Bienvenido, A dministrador")
     } else {
-        alert("Usuario no reconocido")
+        alert("Usuario no reconocido");
+    }
+}
+
+/*Verificar si una palabra empieza con "A"
+ Pide una palabra al usuario
+ . Verifica si empieza con la letra 
+ “A” mayúscula y muestra un
+  mensaje acorde.*/
+
+function palabraMayuscula() {
+    let letra = prompt("Ingresar palabra")
+    let letraA = "A";
+    if (letra[0] == letraA) {
+        alert("la palabra comienza con a mayuscula");
+    } else {
+        alert(" la palabra no comienza con a mayuscula ");
+    }
+}
+/*Precio con descuento
+ Solicita el precio de un producto. 
+ Si el precio es mayor a 10000, 
+ muestra que aplica descuento. 
+ Si no, indica precio normal.*/
+
+
+function precioDescuento() {
+    let precio = prompt("Ingresar precio");
+    if (precio > 10000) {
+        alert("Descuento");
+    } else {
+        alert("precio normal");
+    }
+}
+/*Verificar si una persona puede conducir
+ Solicita la edad del usuario y si tiene licencia
+ (por ejemplo, respondiendo "sí" o "no"). 
+ Si tiene 18 o más y respondió que tiene 
+ licencia, muestra “Puede conducir”. 
+ Si no, muestra “No puede conducir”.*/
+
+function ingresarUsuario(){
+    let = edad = parseInt(prompt("¿Cual estu edad?"));
+    let = tienenLicencia = prompt("¿Tienes licencia de conducir?");
+    if (edad >= 18 && tieneLicencia == "si") {
+        alert("puede conducir");
+    } else {
+        alert("No puede conducir");
     }
 }
 
 
 
-/* 8 Verificar si una palabra empieza con "A"
- Pide una palabra al usuario. Verifica si empieza con la letra “A” mayúscula y muestra un mensaje acorde.*/
 
 
 
-
-
- /* 8 Verificar si una palabra empieza con "A"
- Pide una palabra al usuario. Verifica si empieza con la letra “A” mayúscula y muestra un mensaje acorde.*/
 
 
 
