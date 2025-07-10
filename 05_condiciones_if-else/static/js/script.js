@@ -161,13 +161,22 @@ function precioDescuento() {
  licencia, muestra “Puede conducir”. 
  Si no, muestra “No puede conducir”.*/
 
-function ingresarUsuario(){
-    let = edad = parseInt(prompt("¿Cual estu edad?"));
-    let = tienenLicencia = prompt("¿Tienes licencia de conducir?");
-    if (edad >= 18 && tieneLicencia == "si") {
-        alert("puede conducir");
+
+
+/*parseFloat se ocupa para transformar numero decimal.*/
+/*creación de la función  */
+// añadir porcentaje de descuento e IVA y mostrar.
+
+
+function ingresarUsuario() {
+    let iva = 0.19;
+    let = precioDescuento = parseFloat(prompt("Ingrese el precio del producto "));
+    descuento /= 100;
+    if (precioDescuento > 10000) {
+        alert(`el valor ingresado fue : ${precioDescuento}/n
+            iva :${precioDescuento * iva}?  `);
     } else {
-        alert("No puede conducir");
+        alert("precio normal");
     }
 }
 
