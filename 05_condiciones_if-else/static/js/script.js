@@ -80,31 +80,31 @@ function compararNumeros() {
   if (num1 < num2) {
     alert("el numero " + num1 + " es menor que " + num2);
   }
-  else if(num1 == num2){
+  else if (num1 == num2) {
     alert("el numero " + num1 + " es igual que " + num2);
   }
-  else{
+  else {
     alert("el numero " + num1 + " es mayor que " + num2);
   }
 }
 /* Calificación escolar: Pide una nota entre 1 y 7. Si
 es 4 o más, muestra “Aprobado”, si es menor, muestra “Reprobado”. */
 
-function note(){
+function note() {
   let ingresa = parseInt(prompt("ingresa tu nota:"));
 
-  if (ingresa < 4){
+  if (ingresa < 4) {
     alert("desaprobado");
-  } else if (ingresa >= 4 && ingresa <=7){
+  } else if (ingresa >= 4 && ingresa <= 7) {
     alert("aprobado");
   } else {
-    alert ("por favor, ingresar valor valido");
+    alert("por favor, ingresar valor valido");
   }
 };
 
 // Pide un nombre de usuario. Si el valor ingresado es "admin", muestra “Bienvenido, administrador”. Si no, muestra “Usuario no reconocido”.
 
-function usuarioAdmin(){
+function usuarioAdmin() {
   let usu = prompt("Ingrese usuario")
   if (usu == "admin") {
     alert("Bienvenido, Administrador")
@@ -115,9 +115,9 @@ function usuarioAdmin(){
 
 //  Pide una palabra al usuario. Verifica si empieza con la letra “A” mayúscula y muestra un mensaje acorde.
 
-function palabraMayuscula(){
+function palabraMayuscula() {
   let letra = prompt("Ingresa palabra");
-  let letraA = "A" ;
+  let letraA = "A";
   if (letra[0] == letraA) {
     alert("la palabra comienza con a mayuscula");
   } else {
@@ -125,13 +125,13 @@ function palabraMayuscula(){
   }
 }
 
-function precio(){ // Creación de la función
+function precio() { // Creación de la función
   //Añadir un porcentaje de descuento e IVA y mostrar.
   const iva = 0.19;
   let descuento = parseFloat(prompt("Ingrese el valor de descuento: Ejemplo 20"));
   descuento /= 100; // operación para llevar a decimal
   let precio = parseFloat(prompt("Ingrese el precio del producto"));
-  if (precio > 10000){
+  if (precio > 10000) {
     alert(`El valor ingresado fue: ${precio}\n
           IVA: ${precio * iva}\n
           Precio Total:${precio * 1.19}\n
@@ -140,6 +140,62 @@ function precio(){ // Creación de la función
     alert("Precio normal");
   }
 }
+
+
+/* 10 Verificar si una persona puede conducir
+ Solicita la edad del usuario y si tiene licencia 
+ (por ejemplo, respondiendo "sí" o "no"). 
+ Si tiene 18 o más y respondió que tiene licencia, muestra “Puede conducir”. 
+ Si no, muestra “No puede conducir”. */
+
+
+function licenciaEdad() {
+  let edad = parseInt(prompt("Ingrese su Edad: "));
+  if (edad >= 18 && edad < 100) {
+    let licencia = prompt("Indica si tienes licencia si/no");
+    if (licencia == "si") {
+      alert("Usted puede conducir!");
+
+    } else if (licencia == "no") {
+      alert("No puede conducir!")
+    } else {
+      alert("Ingrese valores válidos!")
+    }
+  } else {
+    alert("Ingrese valores válidos");
+  }
+}
+
+/*11.- Comparar la longitud de dos palabras
+Solicita dos palabras con prompt(). 
+Compara cuántas letras tiene cada una y muestra cuál es más larga o si tienen el mismo largo.*/
+function encontrarPalabraLarga() {
+  let pal1 = prompt("Ingrese primera palabra");
+  let pal2 = promt("ingrese segunda palabra");
+  if (pal1 == "" && pal2 == "") {
+    alert("Ingrese un valor para trabajar...")
+  }
+  else if (pal1.length < pal2.length) {
+    alert(`La palabra más larga es ${pal2} con ${pal2.length} carácteres`)
+  } else if (pal1.length == pal2.length) {
+    alert(`Las palabras  ${pal2} y ${pal1} tienen el mismo largo con :\n
+      ${pal1.length} caracteres`)
+  } else {
+    alert(`La palabra más larga es ${pal1} con ${pal1.length} carácteres`)
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
