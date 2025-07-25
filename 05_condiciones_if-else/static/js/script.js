@@ -1,8 +1,35 @@
+/*&& sirve para agregar condiciones y unirlas
+if es una condición.
+.length es el largo de la palabra
+en español length significa el largo.
+let arreglo = [1, 2345, 4, 5];
+arreglo.length; //3
+se empieza a contar es desde el 0 ejemplo
+longuitud cuenta todos los datos [1, 2345, 4, 5] = 4 datos en total
+arreglo es cuando cuenta desde el 0 ejemplo [1, 2345, 4, 5] = 3
+para aceder al primer arreglo al 1 arreglo[0]; si quiero haceder al 4 tiene que estar arreglo[2];
+
+EJEMPLO:
+
+El espacio igual se cuenta
+let nombre = "Matias Rios";
+nombre.length; 11
+nombre[7];
+
+
+promt es para guardar datos de te indica el usuario
+*/
+
 /* Edad para votar
 Solicita la edad del usuario mediante prompt().
 Muestra con alert() si puede votar
 (18 años o más) o no.
+
+
+parseInt sirve para números enteros 
+parseFloat sirve para numeros decimales
 */
+
 function edadVotar() {
   let edad = parseInt(prompt("Ingrese su Edad: "));
   // Input conversión string a número
@@ -171,7 +198,7 @@ Solicita dos palabras con prompt().
 Compara cuántas letras tiene cada una y muestra cuál es más larga o si tienen el mismo largo.*/
 function encontrarPalabraLarga() {
   let pal1 = prompt("Ingrese primera palabra");
-  let pal2 = promt("ingrese segunda palabra");
+  let pal2 = prompt("ingrese segunda palabra");
   if (pal1 == "" && pal2 == "") {
     alert("Ingrese un valor para trabajar...")
   }
@@ -184,6 +211,43 @@ function encontrarPalabraLarga() {
     alert(`La palabra más larga es ${pal1} con ${pal1.length} carácteres`)
   }
 }
+
+/*12.- Validar correo electrónico
+Pide al usuario que ingrese un correo. Verifica si el texto contiene el símbolo @. 
+Si lo tiene, muestra "Correo válido", si no, "Correo inválido"*/
+
+function validarCorreo() {
+  /*variable */
+  let email = prompt("Por favor, ingresar correo:")
+  /*si */
+  if (email.includes("@")) {
+    /*${}me permite incluir cosas adentro de javascript, solo funciona con comillas invertidas */
+    alert(`El correo ${email} es valido`);
+    /*no */
+  } else {
+    alert(`El correo ${email} es inválido`);
+  }
+
+}
+
+
+
+/*13.- Verificar si un número es positivo o negativo
+Solicita un número. Muestra si es positivo, negativo o cero.
+*/
+let verificarNumero() {
+  let numero = parseInt(prompt("ingresar numero:"));
+  if (numero > 0){
+    alert(`el ${numero} es positivo`);
+  } else if(numero ==0){
+    alert(`el ${numero} no tiene signo`);
+  }
+}
+
+
+
+
+
 
 
 
